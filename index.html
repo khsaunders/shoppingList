@@ -12,6 +12,7 @@
     <span>Hey! What's your budget?</span>
     <input id="budget-input"></input>
     <button id="submit">submit</button>
+    <span id="budgetSpace"></span>
   </div>
   <input placeholder="item" id="item"></input>
   <input placeholder="price" id="price"></input>
@@ -19,12 +20,15 @@
   <ul>
   </ul>
   <span id="total"></span>
+  <span> Remaining:
+    <span id="remaining"></span>
+  </span>
+
   <script type="text/babel">
     var TotalIt = React.createClass({
       render: function(props){
-        return (<span>Total is <p></p>!</span>);
+        return (<span>Total is <p></p></span>);
       }
-
     });
     ReactDOM.render(<TotalIt />, document.getElementById('total'));
   </script>

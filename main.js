@@ -7,7 +7,7 @@ $('#submit').click(function saveBudget(){
   $('.ask-budget').append(newElement);
   console.log(budgetInput);
   console.log(pricesArray);
-
+  localStorage.setItem('budget', budgetInput);
 
 });
 
@@ -15,7 +15,6 @@ $('#submit').click(function saveBudget(){
 //push prices to array; total them
 $('#addIt').click(function addItem(){
   console.log('clicked');
-  //grab value of inputs
   var priceInput = $('#price').val();
   var itemInput = $('#item').val();
   //create new elements with id
@@ -32,10 +31,14 @@ for (var i = 0; i < pricesArray.length; i++) {
     total += pricesArray[i] << 0;
 }
 
+  var budget = localStorage.getItem('budget')
   //put items on the page
   $('ul').append(newItem);
   $(newItem).append(removeBtn);
   console.log(total);
+  var remaining = budget - total;
+  console.log(remaining);
+  // console.log('Remaining monz' + newElement.val - total);
 
   $('p').html(total);
 });
@@ -57,6 +60,5 @@ for (var i = 0; i < pricesArray.length; i++) {
       newTotal = total - itemIdPrice;
       $('p').html(newTotal);
       console.log(newTotal);
-
 
 });
