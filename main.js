@@ -37,10 +37,12 @@ for (var i = 0; i < pricesArray.length; i++) {
   $(newItem).append(removeBtn);
   console.log(total);
   var remaining = budget - total;
+  var budgetSpace = document.getElementById('budgetSpace');
   console.log(remaining);
   // console.log('Remaining monz' + newElement.val - total);
 
-  $('p').html(total);
+  $('#totalId').html(total);
+  $('#remainingCash').html(remaining);
 });
 
 //remove items from DOM and array -- successfully removing from DOM. cannot grab value of removed li to either remove from array or subtract from array sum

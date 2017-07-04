@@ -20,17 +20,21 @@
   <ul>
   </ul>
   <span id="total"></span>
-  <span> Remaining:
-    <span id="remaining"></span>
-  </span>
+  <span id="remaining"></span>
 
   <script type="text/babel">
     var TotalIt = React.createClass({
       render: function(props){
-        return (<span>Total is <p></p></span>);
+        return (<span>Total is <p id="totalId"></p></span>);
+      }
+    });
+    var RemainingCash = React.createClass({
+      render: function(props){
+        return (<span>Remaining <p id="remainingCash"></p></span>);
       }
     });
     ReactDOM.render(<TotalIt />, document.getElementById('total'));
+    ReactDOM.render(<RemainingCash />, document.getElementById('remaining'));
   </script>
   <span id="leftover"></span>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
