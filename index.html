@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <div id="wrapper">
   <div class="ask-budget">
     $
     <input id="budget-input" placeholder="budget"></input>
@@ -16,28 +17,27 @@
     <span id="budgetSpace"></span>
   </div>
   <div class="input-items">
-  <input placeholder="item" id="item"></input>
-  $<input placeholder="price" id="price"></input>
-  <button id="addIt">+</button>
-</div>
+    <input placeholder="item" id="item"></input>
+    $<input placeholder="price" id="price"></input>
+    <button id="addIt">add to list</button>
+  </div>
   <ul>
   </ul>
-  <span id="total"></span>
-  <span id="remaining"></span>
+  <div class="results">
+    <span id="total"></span>
+    <span id="remaining"></span>
+  </div>
+
+<div class="reset-div">
+  <button id="reset"> reset </button>
+</div>
+</div>
 
   <script type="text/babel">
-    var TotalIt = React.createClass({
-      render: function(props){
-        return (<span>Total is <p id="totalId"></p></span>);
-      }
-    });
-    var RemainingCash = React.createClass({
-      render: function(props){
-        return (<span>Remaining <p id="remainingCash"></p></span>);
-      }
-    });
-    ReactDOM.render(<TotalIt />, document.getElementById('total'));
-    ReactDOM.render(<RemainingCash />, document.getElementById('remaining'));
+    var TotalIt = React.createClass({ render: function(props){ return (<span>Total  $<span id="totalId"></span></span>); } }); var RemainingCash = React.createClass({ render: function(props){ return (<span>Remaining  $<span id="remainingCash"></span></span>); } });
+    ReactDOM.render(
+    <TotalIt />, document.getElementById('total')); ReactDOM.render(
+    <RemainingCash />, document.getElementById('remaining'));
   </script>
   <span id="leftover"></span>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>

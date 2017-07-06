@@ -1,7 +1,45 @@
 body{
   margin: 0 auto;
   font-family: 'Lato';
-  background-color: #F0F0F0;
+  background-color: #FAFAFA;
+  width: 70%;
+}
+
+input{
+  font-family: 'Lato';
+  font-size: 1.5em;
+  border: none;
+  border-bottom: solid black 1px;
+  outline: none;
+  background-color: #FAFAFA;
+}
+
+button{
+  background-color: #7DABE6;
+  color: white;
+  border: none;
+  outline: none;
+  padding: .5% 1%;
+  font-size: 1em;
+}
+
+ul{
+  list-style: none;
+  width: 30%;
+  margin: 5% auto 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+li{
+justify-content: space-between;
+}
+
+#wrapper{
+  background-color: #FAFAFA;
+  box-shadow: 0px 10px 30px #888888;
+  padding: 5% 0;
+  margin: 5% auto;
 }
 
 .ask-budget{
@@ -25,24 +63,19 @@ body{
   position: relative;
   display: flex;
   justify-content: space-around;
-  width: 70%;
+  width: 65%;
 }
 
 #item{
-  width: 50%;
+  width: 40%;
 }
 #price{
   margin-left: -2%;
+  width: 25%;
 }
 
-ul{
-  list-style: none;
-  width: 50%;
-  margin: 5% auto 0 auto;
-}
-
-li{
-justify-content: space-between;
+#addIt{
+  padding: 0 1%;
 }
 
 .newItem{
@@ -53,18 +86,38 @@ justify-content: space-between;
   float: right;
 }
 
-input{
-  font-family: 'Lato';
-  font-size: 1.5em;
-  border: none;
-  border-bottom: solid black 1px;
-  outline: none;
-  background-color: #F0F0F0;
+.results{
+  margin: 15% auto;
+  width: 70%;
 }
 
-button{
-  background-color: white;
-  border: none;
-  outline: none;
-  padding: .5% 1%;
+#total{
+  float: left;
+}
+
+#remaining{
+  float: right;
+}
+
+#totalId{
+  margin-left: 2%;
+}
+
+#remainingCash{
+  margin-left: 2%;
+}
+
+.reset-div{
+  display: flex;
+}
+
+#reset{
+  font-size: 1.5em;
+  color: white;
+  background-color: #E68B7D;
+  justify-content: center;
+  padding: 1% 20%;
+  margin: 35% auto 0 auto;
+  position: relative;
+  text-align: center;
 }

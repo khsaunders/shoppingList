@@ -23,6 +23,8 @@ $('#addIt').click(function addItem(){
   var totalSpot = $('#total');
   newPrice.append(priceInput);
   newItem.append(itemInput, newPrice);
+  document.getElementById('price').value = ' ';
+  document.getElementById('item').value = ' ';
   // var removeBtn = $('<button></button').append('-');
   var total = 0;
   //push value to the array
@@ -66,3 +68,7 @@ for (var i = 0; i < pricesArray.length; i++) {
       console.log(newTotal);
 
 });
+
+$('#reset').on('click', function(){
+  window.location.reload();
+})
