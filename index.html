@@ -4,19 +4,22 @@
 <head>
   <meta charset="utf-8">
   <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <div class="ask-budget">
-    <span>Hey! What's your budget?</span>
-    <input id="budget-input"></input>
-    <button id="submit">submit</button>
+    $
+    <input id="budget-input" placeholder="budget"></input>
+    <button id="submit">save</button>
     <span id="budgetSpace"></span>
   </div>
+  <div class="input-items">
   <input placeholder="item" id="item"></input>
-  <input placeholder="price" id="price"></input>
+  $<input placeholder="price" id="price"></input>
   <button id="addIt">+</button>
+</div>
   <ul>
   </ul>
   <span id="total"></span>
