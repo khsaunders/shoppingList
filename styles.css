@@ -45,6 +45,14 @@ li{
 justify-content: space-between;
 }
 
+.newItem{
+  float: left:
+}
+
+.newPrice{
+  float: right;
+}
+
 input{
   font-family: 'Lato';
   font-size: 1.5em;

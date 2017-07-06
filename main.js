@@ -18,9 +18,11 @@ $('#addIt').click(function addItem(){
   var priceInput = $('#price').val();
   var itemInput = $('#item').val();
   //create new elements with id
-  var newItem = $("<li></li>", {id : priceInput});
+  var newItem = $("<li class=newItem></li>");
+  var newPrice = $("<span class=newPrice></span>", {id : priceInput});
   var totalSpot = $('#total');
-  newItem.append( itemInput + " " + priceInput);
+  newPrice.append(priceInput);
+  newItem.append(itemInput, newPrice);  
   // var removeBtn = $('<button></button').append('-');
   var total = 0;
   //push value to the array
