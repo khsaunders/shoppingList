@@ -22,7 +22,7 @@ $('#addIt').click(function addItem(){
   var newPrice = $("<span class=newPrice></span>", {id : priceInput});
   var totalSpot = $('#total');
   newPrice.append(priceInput);
-  newItem.append(itemInput, newPrice);  
+  newItem.append(itemInput, newPrice);
   // var removeBtn = $('<button></button').append('-');
   var total = 0;
   //push value to the array
@@ -36,7 +36,7 @@ for (var i = 0; i < pricesArray.length; i++) {
   var budget = localStorage.getItem('budget')
   //put items on the page
   $('ul').append(newItem);
-  $(newItem).append(removeBtn);
+  // $(newItem).append(removeBtn);
   console.log(total);
   var remaining = budget - total;
   var budgetSpace = document.getElementById('budgetSpace');
