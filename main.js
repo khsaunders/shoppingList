@@ -3,8 +3,10 @@ var pricesArray = [];
 //grab value from budget input
 $('#submit').click(function saveBudget(){
   var budgetInput = $('#budget-input').val();
-  var newElement = $('<span></span>').append(budgetInput);
-  $('.ask-budget').append(newElement);
+  var newElement = $('<span id="theBudget"></span>').append('$' + budgetInput);
+  // $('.ask-budget').append(newElement);
+  $('#submit').css('display', 'none');
+  $('.fa-check-circle-o').css('display', 'inline');
   console.log(budgetInput);
   console.log(pricesArray);
   localStorage.setItem('budget', budgetInput);
@@ -18,15 +20,17 @@ $('#addIt').click(function addItem(){
   var priceInput = $('#price').val();
   var itemInput = $('#item').val();
   //create new elements with id
-  var newItem = $("<li class=newItem></li>");
+  var newListItem = $("<li class=newListItem></li>");
+  var newEntry = $('<span class=newEntry></span>');
   var newPrice = $("<span class=newPrice></span>", {id : priceInput});
   var totalSpot = $('#total');
-  newPrice.append(priceInput);
-  newItem.append(itemInput, newPrice);
+  newPrice.append('$ ' + priceInput);
+  newEntry.append(itemInput);
+  newListItem.append(newPrice, newEntry);
   document.getElementById('price').value = ' ';
   document.getElementById('item').value = ' ';
-  // var removeBtn = $('<button></button').append('-');
   var total = 0;
+
   //push value to the array
   pricesArray.push(priceInput);
 
@@ -37,8 +41,8 @@ for (var i = 0; i < pricesArray.length; i++) {
 
   var budget = localStorage.getItem('budget')
   //put items on the page
-  $('ul').append(newItem);
-  // $(newItem).append(removeBtn);
+  $('ul').append(newListItem);
+  // $(newListItem).append(removeBtn);
   console.log(total);
   var remaining = budget - total;
   var budgetSpace = document.getElementById('budgetSpace');
