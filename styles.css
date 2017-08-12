@@ -1,6 +1,9 @@
 /*Mobile View*/
 
-@media screen and (max-width: 959px){
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5)
+only screen and (max-width: 959px){
   body {
     margin: 0 auto;
     font-size: 1.25em;
@@ -53,6 +56,12 @@
   li {
     justify-content: space-between;
     padding: 1% 2%;
+  }
+
+  #wrapper{
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
   }
 
   #logo{
@@ -122,6 +131,7 @@
   }
 
   .results{
+    position: fixed;
     width: 100%;
     bottom: 0px;
   }

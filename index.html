@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300" media="screen" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -32,18 +32,20 @@
       <ul>
       </ul>
     </div>
-    <div class="results">
-      <div class=bottom-spans id="total-span">
-        <span id="total"></span>
-      </div>
-      <div class="bottom-spans" id="remaining-span">
-        <span id="remaining"></span>
-      </div>
-      <div class="reset-div">
-        <button id="reset"> reset </button>
-      </div>
+  </div>
+  <footer>
+  <div class="results">
+    <div class=bottom-spans id="total-span">
+      <span id="total"></span>
+    </div>
+    <div class="bottom-spans" id="remaining-span">
+      <span id="remaining"></span>
+    </div>
+    <div class="reset-div">
+      <button id="reset"> reset </button>
     </div>
   </div>
+</footer>
 
   <script type="text/babel">
     var TotalIt = React.createClass({ render: function(props){ return (<span>total  $<span id="totalId"></span></span>); } }); var RemainingCash = React.createClass({ render: function(props){ return (<span>remaining  $<span id="remainingCash"></span></span>);
