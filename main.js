@@ -7,6 +7,7 @@ $('#submit').click(function saveBudget(){
   // $('.ask-budget').append(newElement);
   $('#submit').css('display', 'none');
   $('.fa-check-circle-o').css('display', 'inline');
+  $('#budget-input').css('margin-right', '5%');
   console.log(budgetInput);
   console.log(pricesArray);
   localStorage.setItem('budget', budgetInput);
