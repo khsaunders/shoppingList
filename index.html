@@ -3,13 +3,16 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <header>
+    <img src="preserveLogoOfficial.png" id="logo">
     <h3> preserve </h3>
   </header>
   <div id="wrapper">
@@ -17,31 +20,33 @@
       $
       <input id="budget-input" placeholder="budget"></input>
       <button id="submit">save</button>
+      <i class="fa fa-check-circle-o" aria-hidden="true"></i>
       <span id="budgetSpace"></span>
     </div>
     <div class="input-items">
       $<input placeholder="price" id="price"></input>
       <input placeholder="item" id="item"></input>
-      <button id="addIt">add to list</button>
+      <button id="addIt">+</button>
     </div>
     <div class="listWrapper">
       <ul>
       </ul>
     </div>
     <div class="results">
-      <span id="total"></span>
-      <span id="remaining"></span>
-    </div>
-
-    <div class="reset-div">
-      <button id="reset"> reset </button>
+      <div class=bottom-spans id="total-span">
+        <span id="total"></span>
+      </div>
+      <div class="bottom-spans" id="remaining-span">
+        <span id="remaining"></span>
+      </div>
+      <div class="reset-div">
+        <button id="reset"> reset </button>
+      </div>
     </div>
   </div>
 
   <script type="text/babel">
-    var TotalIt = React.createClass({ render: function(props){ return (<span>Total  $<span id="totalId"></span></span>); } });
-    var RemainingCash = React.createClass({ render: function(props){
-       return (<span>Remaining  $<span id="remainingCash"></span></span>);
+    var TotalIt = React.createClass({ render: function(props){ return (<span>total  $<span id="totalId"></span></span>); } }); var RemainingCash = React.createClass({ render: function(props){ return (<span>remaining  $<span id="remainingCash"></span></span>);
     } }); ReactDOM.render(
     <TotalIt />, document.getElementById('total')); ReactDOM.render(
     <RemainingCash />, document.getElementById('remaining'));
